@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Create Profile</title>
+</head>
+<body class="bg-gradient-to-br from-pink-100 via-pink-200 to-purple-100">
+  <div class="flex justify-center items-center min-h-screen">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8">
+      <div class="text-center mb-6">
+        <h1 class="text-3xl font-bold text-pink-600 mb-2">Create Profile</h1>
+        <img src="./Images/OIP_100-removebg-preview.png" alt="Profile" class="mx-auto" />
+        <p class="text-gray-500">Fill in your details below</p>
+      </div>
+
+      <!-- Form -->
+      <form id="profile-form" class="space-y-4">
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">First Name</label>
+          <input id="first-name" type="text" placeholder="Enter Your First Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" required />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Last Name</label>
+          <input id="last-name" type="text" placeholder="Enter Your Last Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" required />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Age</label>
+          <input id="age" type="number" placeholder="Enter Your Age" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" required />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Phone Number</label>
+          <input id="phone" type="number" placeholder="Enter Your Number" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" required />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">State</label>
+          <select id="state" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" required>
+            <option value="">Select State</option>
+            <option>Andhra Pradesh</option>
+            <option>Delhi</option>
+            <option>Uttar Pradesh</option>
+            <!-- Add all other options you want -->
+          </select>
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Pincode</label>
+          <input id="pincode" type="number" placeholder="Enter Your Pincode" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300" required />
+        </div>
+        <button type="submit" class="w-full bg-pink-600 text-white py-3 rounded-lg font-bold hover:bg-pink-500 transition-colors">
+          Submit
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("profile-form").onsubmit = async function(e) {
+      e.preventDefault();
+      const data = {
+        first_name: document.getElementById("first-name").value,
+        last_name: document.getElementById("last-name").value,
+        age: document.getElementById("age").value,
+        phone: document.getElementById("phone").value,
+        state: document.getElementById("state").value,
+        pincode: document.getElementById("pincode").value
+      };
+      const response = await fetch("http://127.0.0.1:5000/create_profile", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      const result = await response.json();
+      alert(result.message);
+    };
+  </script>
+</body>
+</html>
