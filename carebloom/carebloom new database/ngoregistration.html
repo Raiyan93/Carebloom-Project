@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Registration</title>
+    <script src="https://cdn.tailwindcss.com "></script>
+    <style>
+        @keyframes riseUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-rise { animation: riseUp 0.8s ease-out forwards; }
+    </style>
+</head>
+<body class="bg-pink-50">
+    <div class="min-h-screen flex items-center justify-center p-4">
+        <div class="bg-white shadow-xl w-full max-w-2xl p-8 rounded-2xl animate-rise">
+            <div class="text-center mb-8">
+                <div class="inline-block bg-pink-100 p-3 rounded-full mb-4">
+                    <svg class="w-10 h-10 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0v-4a2 2 0 012-2h6a2 2 0 012 2v4m-6 0h-2"></path></svg>
+                </div>
+                <h1 class="text-3xl font-bold text-pink-600">Register Your NGO</h1>
+                <p class="text-gray-500 mt-2">Join CareBloom and make a difference with us!</p>
+            </div>
+
+            <form id="ngo-registration-form" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="ngo-name" class="block text-sm font-medium text-gray-700 mb-1">NGO Name *</label>
+                        <input type="text" id="ngo-name" required placeholder="e.g., Hope Foundation" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition">
+                    </div>
+                    <div>
+                        <label for="org-type" class="block text-sm font-medium text-gray-700 mb-1">Organization Type *</label>
+                        <select id="org-type" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition bg-white">
+                            <option value="">Select Type</option>
+                            <option>Trust</option>
+                            <option>Society</option>
+                            <option>Section 8 Company</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="reg-number" class="block text-sm font-medium text-gray-700 mb-1">Registration Number *</label>
+                        <input type="text" id="reg-number" required placeholder="Enter registration number" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition">
+                    </div>
+                    <div>
+                        <label for="reg-date" class="block text-sm font-medium text-gray-700 mb-1">Date of Registration</label>
+                        <input type="date" id="reg-date" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition text-gray-500">
+                    </div>
+                </div>
+                <div>
+                    <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Registered Address *</label>
+                    <input type="text" id="address" required placeholder="Enter your full registered address" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label for="city" class="block text-sm font-medium text-gray-700 mb-1">City *</label>
+                        <input type="text" id="city" required placeholder="Your City" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition">
+                    </div>
+                    <div>
+                        <label for="state" class="block text-sm font-medium text-gray-700 mb-1">State *</label>
+                       <select id="state" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white">
+                            <option value="">Select State</option>
+                            <option>Andhra Pradesh</option>
+                            <option>Arunachal Pradesh</option>
+                            <option>Assam</option>
+                            <option>Bihar</option>
+                            <option>Chhattisgarh</option>
+                            <option>Goa</option>
+                            <option>Gujarat</option>
+                            <option>Haryana</option>
+                            <option>Himachal Pradesh</option>
+                            <option>Jharkhand</option>
+                            <option>Karnataka</option>
+                            <option>Kerala</option>
+                            <option>Madhya Pradesh</option>
+                            <option>Maharashtra</option>
+                            <option>Manipur</option>
+                            <option>Meghalaya</option>
+                            <option>Mizoram</option>
+                            <option>Nagaland</option>
+                            <option>Odisha</option>
+                            <option>Punjab</option>
+                            <option>Rajasthan</option>
+                            <option>Sikkim</option>
+                            <option>Tamil Nadu</option>
+                            <option>Telangana</option>
+                            <option>Tripura</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Uttarakhand</option>
+                            <option>West Bengal</option>
+                            <option>Andaman and Nicobar Islands</option>
+                            <option>Chandigarh</option>
+                            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                            <option>Delhi</option>
+                            <option>Lakshadweep</option>
+                            <option>Puducherry</option>
+                            <option>Ladakh</option>
+                            <option>Jammu and Kashmir</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pincode" class="block text-sm font-medium text-gray-700 mb-1">Pincode *</label>
+                        <input type="number" id="pincode" required placeholder="Your Pincode" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition">
+                        <span id="pincode-error" class="text-red-500 text-xs hidden">Please enter a valid 6-digit pincode.</span>
+                    </div>
+                </div>
+                <script>
+                    document.getElementById('pincode').addEventListener('input', function() {
+                        const val = this.value;
+                        const error = document.getElementById('pincode-error');
+                        // Ensure input is exactly 6 digits
+                        if (val.length !== 6 || isNaN(val)) {
+                            error.classList.remove('hidden');
+                        } else {
+                            error.classList.add('hidden');
+                        }
+                    });
+                </script>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="contact-number" class="block text-sm font-medium text-gray-700 mb-1">Contact Number *</label>
+                        <input 
+                            type="tel" 
+                            id="contact-number" 
+                            required 
+                            pattern="[6-9]\d{9}" 
+                            maxlength="10"
+                            minlength="10"
+                            placeholder="Enter 10-digit mobile number"
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
+                        >
+                        <span id="contact-error" class="text-red-500 text-xs hidden">Please enter a valid 10-digit Indian mobile number.</span>
+                    </div>
+
+                    <script>
+                    document.getElementById('contact-number').addEventListener('input', function() {
+                        const val = this.value;
+                        const error = document.getElementById('contact-error');
+                        // Only allow numbers
+                        this.value = val.replace(/[^0-9]/g, '');
+                        // Validation: 10 digits, starts with 6-9
+                        if (/^[6-9]\d{9}$/.test(this.value)) {
+                            error.classList.add('hidden');
+                        } else {
+                            error.classList.remove('hidden');
+                        }
+                    });
+                    </script>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                        <input type="email" id="email" required placeholder="you@example.com" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition">
+                    </div>
+                </div>
+                <div>
+                    <label for="website" class="block text-sm font-medium text-gray-700 mb-1">Official Website</label>
+                    <input type="url" id="website" placeholder="https://example.com " class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition">
+                </div>
+                <div class="relative w-full flex items-center">
+                    <div id="password-tooltip" class="hidden absolute right-full mr-3 w-[280px] bg-pink-100 text-gray-800 text-sm rounded-md shadow-lg p-3 border border-pink-300">
+                        <div class="relative">
+                            <p class="font-semibold mb-1">Password must include:</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li id="length" class="invalid">At least 8 characters</li>
+                                <li id="uppercase" class="invalid">One uppercase letter</li>
+                                <li id="lowercase" class="invalid">One lowercase letter</li>
+                                <li id="number" class="invalid">One number</li>
+                                <li id="special" class="invalid">One special character (!@#$%^&*)</li>
+                                <li id="spaces" class="invalid">No spaces</li>
+                            </ul>
+                            <div class="absolute top-3 -right-2 w-0 h-0 border-t-8 border-b-8 border-l-8 border-t-transparent border-b-transparent border-l-pink-100"></div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password *</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            required 
+                            minlength="8" 
+                            placeholder="Enter password" 
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
+                        >
+                    </div>
+                </div>
+
+                <style>
+                    .valid { color: #16a34a; }   /* green-600 */
+                    .invalid { color: #dc2626; } /* red-600 */
+                </style>
+
+                <script>
+                    const password = document.getElementById("password");
+                    const tooltip = document.getElementById("password-tooltip");
+                    const requirements = {
+                        length: /.{8,}/,
+                        uppercase: /[A-Z]/,
+                        lowercase: /[a-z]/,
+                        number: /[0-9]/,
+                        special: /[!@#$%^&*(),.?":{}|<>]/,
+                        spaces: /^\S*$/,
+                    };
+
+                    // Show tooltip on focus
+                    password.addEventListener("focus", () => {
+                        tooltip.classList.remove("hidden");
+                    });
+
+                    // Hide tooltip if empty on blur
+                    password.addEventListener("blur", () => {
+                        if (password.value === "") {
+                            tooltip.classList.add("hidden");
+                        }
+                    });
+
+                    // Live validation updates
+                    password.addEventListener("input", () => {
+                        Object.keys(requirements).forEach(key => {
+                            const isValid = requirements[key].test(password.value);
+                            document.getElementById(key).className = isValid ? "valid" : "invalid";
+                        });
+                    });
+                </script><br>
+                <div>
+                    <button type="submit" class="w-full text-white bg-pink-600 hover:bg-pink-700 rounded-lg py-3 px-4 font-bold text-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 mt-4">Register Now</button>
+                </div>
+            </form>
+
+            <div class="text-center mt-6"><p class="text-gray-600">Already have an account? <a href="LoginSignUp.html" class="font-semibold text-pink-600 hover:underline">Log In</a></p></div>
+        </div>
+    </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./auth.js"></script>
+<script>
+    console.log('✅ NGO Registration page loaded');
+    
+    document.getElementById('ngo-registration-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        console.log('🔄 NGO Registration started...');
+        
+        const submitBtn = event.target.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Registering...';
+
+        try {
+            const ngoData = {
+                ngoName: document.getElementById('ngo-name').value,
+                orgType: document.getElementById('org-type').value,
+                regNumber: document.getElementById('reg-number').value,
+                regDate: document.getElementById('reg-date').value,
+                address: document.getElementById('address').value,
+                city: document.getElementById('city').value,
+                state: document.getElementById('state').value,
+                pincode: document.getElementById('pincode').value,
+                contactNumber: document.getElementById('contact-number').value,
+                email: document.getElementById('email').value,
+                website: document.getElementById('website').value,
+                password: document.getElementById('password').value
+            };
+
+            console.log('📝 NGO data collected');
+
+            // Validate required fields
+            if (!ngoData.ngoName || !ngoData.orgType || !ngoData.regNumber || !ngoData.email || !ngoData.password) {
+                throw new Error('Please fill in all required fields');
+            }
+            
+            // Pincode validation check before submission
+            const pincodeInput = document.getElementById('pincode');
+            if (pincodeInput.value.length !== 6) {
+                throw new Error('Please enter a valid 6-digit pincode.');
+            }
+
+            // Contact number validation
+            const contactInput = document.getElementById('contact-number');
+            if (!/^[6-9]\d{9}$/.test(contactInput.value)) {
+                throw new Error('Please enter a valid 10-digit Indian mobile number.');
+            }
+            
+            await window.authHelper.signupNGO(ngoData);
+            
+            // Don't re-enable the button here since we're redirecting
+            
+        } catch (error) {
+            console.error('💥 NGO Registration failed:', error);
+            alert('Registration failed: ' + error.message);
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
+    });
+</script>
+</body>
+</html>
